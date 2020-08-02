@@ -1,0 +1,574 @@
+/* @charset "ISO-8859-1"; */
+body {
+	/* background: rgba(0, 0, 0, 0.76); */
+	height: 100%;
+	/* background-image: url("bus_bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; */
+}
+
+a {
+	text-decoration: none !important;
+}
+
+h1, h2, h3 {
+	font-family: 'Roboto', sans-serif, cursive !important;
+}
+
+header {
+	color: black;
+}
+
+.btn_header_left {
+	border: none !important;
+}
+
+.btn_header_right {
+	border: none !important;
+}
+
+.myform {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 1rem;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	pointer-events: auto;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 1.1rem;
+	outline: 0;
+	max-width: 500px;
+	margin-top: 4.2rem;
+}
+
+.tx-tfm {
+	text-transform: uppercase;
+}
+
+.mybtn {
+	border-radius: 50px !important;
+}
+
+.login-or {
+	position: relative;
+	color: #aaa;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.span-or {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: -2px;
+	margin-left: -25px;
+	background-color: #fff;
+	width: 50px;
+	text-align: center;
+}
+
+.hr-or {
+	height: 1px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.google {
+	color: #666;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	outline: none;
+	border: 1px solid lightgrey;
+}
+
+form .error {
+	color: #ff0000;
+}
+
+#second {
+	display: none;
+}
+
+.header__right {
+	padding-left: 600px;
+	font-size: 24px;
+}
+
+.header__right li {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.logout {
+	padding-left: 50px;
+}
+
+.signup {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 1.1rem;
+}
+
+.booking {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: left;
+	padding: 20px;
+}
+
+.logout {
+	margin-left: 150px;
+	color: black;
+	font-size: 24px;
+	font-style: italic;
+}
+
+.dropdown-toggle::after {
+	display: inline-block;
+	margin-left: .255em;
+	vertical-align: .255em;
+	content: "";
+	border-top: .3em solid;
+	border-right: .3em solid transparent;
+	border-bottom: 0;
+	border-left: .3em solid transparent;
+	visibility: hidden;
+}
+
+.dropdown-toggle::before {
+	display: inline-block;
+	margin-left: .255em;
+	vertical-align: .255em;
+	content: "";
+	border-top: .3em solid;
+	border-right: .3em solid transparent;
+	border-bottom: 0;
+	border-left: .3em solid transparent;
+}
+
+#find_bus {
+	margin-left: 200px;
+}
+
+/* TEAM  */
+.team h2 {
+	text-align: center;
+	font-size: 2.5rem;
+	color: white;
+	padding: 60px;
+}
+
+.team {
+	background-color: #f1f2b3;
+}
+
+.team__content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 25px;
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 0 40px;
+}
+
+.team__item img {
+	width: 100%;
+	display: block;
+	height: 300px;
+}
+
+.team__title {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: #eadf67;
+	color: white;
+	width: 100%;
+	text-align: left;
+	padding: 20px;
+}
+
+.team__item {
+	position: relative;
+	overflow: hidden;
+}
+
+.team__detail {
+	background-color: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: white;
+	padding: 40px 20px;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.team__detail h3 {
+	color: #eadf67;
+	transition: all 0.5s;
+}
+
+.signup__admin {
+	margin-left: 150px !important;
+}
+
+.adminPage {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+}
+
+.menu {
+	background-color: #00ffb2;
+	color: white !important;
+	padding: 30px;
+}
+
+.menu span {
+	font-size: 24px;
+}
+
+.menu a {
+	color: white;
+}
+
+.menu__content {
+	padding-left: 200px;
+	padding-bottom: 15px;
+}
+
+.role_customer {
+	margin-right: 50px;
+	margin-left: 10px;
+}
+
+.role_seller {
+	margin-left: 10px;
+}
+
+.booking {
+	top: 0;
+	margin-top: 210px;
+	margin-left: 150px;
+	margin-bottom: 300px;
+}
+
+.date {
+	width: 200px;
+	height: 38px;
+}
+
+.btn__booking {
+	background-color: #eadf67 !important;
+}
+
+.btn__booking {
+	background-color: #eadf67 !important;
+}
+
+.table__booking {
+	background-color: rgba(247, 247, 247, 0.2) !important;
+	width: 500px !important;
+	overflow: auto;
+}
+
+.table__booking__view {
+	background-color: rgba(247, 247, 247, 0.5) !important;
+	width: 600px !important;
+	overflow: auto;
+}
+
+.booking__View__Left {
+	margin-left: 50px;
+}
+
+.booking__View {
+	background-image: url("bg.jpg");
+	font-size: 24px;
+}
+
+.btn__logout {
+	margin-left: 800px;
+}
+
+.content__edit {
+	width: 650px;
+	margin-left: 80px;
+}
+
+.btn__save {
+	width: 150px;
+	height: 40px;
+	margin-left: 115px;
+}
+
+.btn__save_role {
+	width: 150px;
+	height: 40px;
+	margin-left: 100px;
+}
+
+.table__setRole {
+	margin-left: 400px;
+}
+
+.sub__title_bus {
+	margin-left: 290px;
+}
+
+.table__bus {
+	border: none;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+.table__bus__seller {
+	border: none;
+	margin-left: 10px
+}
+
+.table__view__seller {
+	margin-left: 280px;
+	width: 500px !important;
+	background-color: #eadf67 !important;
+}
+
+.filter__seller {
+	width: 550px !important;
+	margin-left: 380px;
+}
+
+.btn__view__cart {
+	margin-left: 400px;
+}
+
+/* Carousel */
+.carousel {
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel img {
+	height: 500px;
+}
+
+/* Operators */
+#operators h3 {
+	font-size: 36px;
+	margin-left: 580px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/* Footer */
+.icon__footer i {
+	font-size: 36px;
+	width: 100px;
+	margin-left: 95px;
+	margin-top: 50px;
+	color: gray;
+}
+
+.content__footer {
+	width: 300px;
+}
+
+.item__footer {
+	display: flex;
+	flex-direction: row;
+	margin-left: 160px;
+}
+
+.item2__footer {
+	margin: 50px;
+}
+
+.item2__footer img {
+	width: 100px;
+	height: 100px;
+}
+
+.content__footer {
+	background-color: white;
+	width: auto;
+	color: black;
+}
+
+.list__chair {
+	margin-left: 20px;
+}
+
+.chair {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* Login */
+.card0 {
+	box-shadow: 0px 4px 8px 0px #757575;
+	border-radius: 0px
+}
+
+.card2 {
+	margin: 0px 40px
+}
+
+.logo {
+	width: 200px;
+	height: 100px;
+	margin-top: 20px;
+	margin-left: 35px
+}
+
+.image {
+	width: 360px;
+	height: 280px
+}
+
+.border-line {
+	border-right: 1px solid #EEEEEE
+}
+
+.facebook {
+	background-color: #3b5998;
+	color: #fff;
+	font-size: 18px;
+	padding-top: 5px;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	cursor: pointer
+}
+
+.twitter {
+	background-color: #1DA1F2;
+	color: #fff;
+	font-size: 18px;
+	padding-top: 5px;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	cursor: pointer
+}
+
+.linkedin {
+	background-color: #2867B2;
+	color: #fff;
+	font-size: 18px;
+	padding-top: 5px;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	cursor: pointer
+}
+
+.line {
+	height: 1px;
+	width: 45%;
+	background-color: #E0E0E0;
+	margin-top: 10px
+}
+
+.or {
+	width: 10%;
+	font-weight: bold
+}
+
+.text-sm {
+	font-size: 14px !important
+}
+
+::placeholder {
+	color: #BDBDBD;
+	opacity: 1;
+	font-weight: 300
+}
+
+:-ms-input-placeholder {
+	color: #BDBDBD;
+	font-weight: 300
+}
+
+::-ms-input-placeholder {
+	color: #BDBDBD;
+	font-weight: 300
+}
+
+input, textarea {
+	padding: 10px 12px 10px 12px;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	margin-bottom: 5px;
+	margin-top: 2px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2C3E50;
+	font-size: 14px;
+	letter-spacing: 1px
+}
+
+input:focus, textarea:focus {
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	border: 1px solid #304FFE;
+	outline-width: 0
+}
+
+button:focus {
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	outline-width: 0
+}
+
+a {
+	color: inherit;
+	cursor: pointer
+}
+
+.btn-blue {
+	background-color: #1A237E;
+	width: 150px;
+	color: #fff;
+	border-radius: 2px
+}
+
+.btn-blue:hover {
+	background-color: #000;
+	cursor: pointer
+}
+
+.bg-blue {
+	color: #fff;
+	background-color: #1A237E
+}
+
+@media screen and (max-width: 991px) {
+	.logo {
+		margin-left: 0px
+	}
+	.image {
+		width: 300px;
+		height: 220px
+	}
+	.border-line {
+		border-right: none
+	}
+	.card2 {
+		border-top: 1px solid #EEEEEE !important;
+		margin: 0px 15px
+	}
+}

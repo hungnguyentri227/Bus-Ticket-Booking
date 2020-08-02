@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<title>Home</title>
+<link rel="stylesheet" href="/css/index.css" />
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<h2>Mock Project</h2>
+		<h2 class="header__right">
+			Hi, <a class="navbar-brand" th:href="@{/home/information}"><span
+				th:utext="${userName}"></span></a>
+		</h2>
+		<a th:href="@{/logout}" class="logout btn btn-outline-warning">Sign
+			out</a>
+	</nav>
+	<section class="team">
+		<h2>List Bus</h2>
+		<div class="team__content">
+			<div class="team__item">
+				<img src="/imgs/bus_1.jpg" alt="tao sai roi">
+				<div class="team__title">
+					<h3>John Simon</h3>
+					<p>-Cake Maker</p>
+				</div>
+				<div class="team__detail">
+					<h3>John Simon</h3>
+					<p>-Cake Maker</p>
+					<p>Mauris tincidunt dolor eget diam dapibus vitae finibusnisl
+						friuisque pretiuam</p>
+					<button class="btn btn-info">Book Now</button>
+				</div>
+			</div>
+			<div class="team__item team__item2">
+				<img src="/imgs/bus_2.jpg" alt="">
+				<div class="team__title">
+					<h3>John Simon</h3>
+					<p>-Cake Maker</p>
+				</div>
+				<div class="team__detail">
+					<h3>John Simon</h3>
+					<p>-Cake Maker</p>
+					<p>Mauris tincidunt dolor eget diam dapibus vitae finibusnisl
+						friuisque pretiuam</p>
+					<button class="btn btn-info">Book Now</button>
+				</div>
+			</div>
+			<div class="team__item team__item3">
+				<img src="/imgs/bus_3.jpg" alt="">
+				<div class="team__title">
+					<h3>John Simon</h3>
+					<p>-Cake Maker</p>
+				</div>
+				<div class="team__detail">
+					<h3>John Simon</h3>
+					<p>-Cake Maker</p>
+					<p>Mauris tincidunt dolor eget diam dapibus vitae finibusnisl
+						friuisque pretiuam</p>
+					<a class="btn btn-info" th:href="@{/user/booking}">Book Now</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="page-footer font-small cyan darken-3">
+
+
+		<!-- Footer Elements -->
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">
+			© 2020 Copyright: <a href="https://mdbootstrap.com/">
+				MDBootstrap.com</a>
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+</body>
+</html>

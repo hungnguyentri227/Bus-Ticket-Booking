@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/index.css" />
+<!-- CSS only -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+	rel="stylesheet">
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<h2>
+				<img src="/img/logo2.jpg" class="d-block w-70" alt="..."
+					style="height: 80px">
+			</h2>
+			<h2 class="header__right">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav" style="margin-left: 370px">
+							<li class="nav-item dropdown"><a th:if="${user==null}"
+								th:href="@{/login}" class="btn btn-outline-info mt-1">Sign
+									in</a></li>
+							<div class="dropdown" th:if="${user}">
+								<a class="btn btn-secondary dropdown-toggle" href="#"
+									role="button" id="dropdownMenuLink" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false"> <span
+									th:utext="${user.firstname}"></span>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									</a> <a class="dropdown-item" th:href="@{/admin/information}">My
+										Information</a>
+									<div class="dropdown-divider"></div>
+									<a th:href="@{/logout}" class="dropdown-item">Sign out</a>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</nav>
+			</h2>
+		</nav>
+	</header>
+	<!-- Menu -->
+	<div class="adminPage" style="background-color: #FFFFF0">
+		<div class="menu">
+			<span><i class="fa fa-th-list mr-2"></i>Dashboards</span><br /> <a
+				th:href="@{/admin/adminPage}">Create account</a><br /> <a
+				th:href="@{/admin/viewUser}">View all of user</a>
+		</div>
+		<div class="menu__content">
+			<div class="container signup__admin">
+				<div class="card signup" style="margin-top: 50px">
+					<article class="card-body mx-auto" style="max-width: 400px;">
+						<form class="form-horizontal" role="form" method="POST"
+							th:action="@{/saveNewUser}" th:object="${user}">
+							<div class="row">
+								<div class="col-md-3"></div>
+								<div class="col-md-6">
+									<div class="alert alert-success" role="alert" th:if="${msg}"
+										th:utext="${msg}"></div>
+								</div>
+							</div>
+							<h3 class="card-title text-center">
+								Create Account
+								</h4>
+								<p class="text-center">Get started with your free account</p>
+								<div class="form-group input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-user"></i>
+										</span>
+									</div>
+									<input type="text" th:field="*{firstname}" class="form-control"
+										id="firstname" placeholder="First Name" required autofocus>
+								</div>
+
+								<div class="form-group input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-user"></i>
+										</span>
+									</div>
+									<input type="text" th:field="*{lastname}" class="form-control"
+										id="lastname" placeholder="Last name" required autofocus>
+								</div>
+
+
+								<div class="form-group input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i
+											class="fa fa-envelope"></i> </span>
+									</div>
+									<input type="text" th:field="*{email}" class="form-control"
+										id="email" placeholder="Email address" required autofocus>
+								</div>
+								<div class="form-control-feedback">
+									<span class="text-danger align-middle"
+										th:if="${#fields.hasErrors('email')}" th:errors="*{email}">
+									</span>
+								</div>
+
+								<div class="form-group has-danger input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-key"></i>
+										</span>
+									</div>
+									<input type="password" th:field="*{password}"
+										class="form-control" id="password" placeholder="Password"
+										required>
+								</div>
+
+
+								<div class="form-control-feedback">
+									<span class="text-danger align-middle"
+										th:if="${#fields.hasErrors('password')}"
+										th:errors="*{password}"> </span>
+								</div>
+
+							
+
+								<div class="form-group check__role" >
+									Customer<input type="radio" value="customer" th:name="roleRadioNew" class="role_customer" checked="checked"> 
+									Seller <input type="radio" value="seller" th:name="roleRadioNew" class="role_seller">
+								</div>
+
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary btn-block">
+										Create Account</button>
+								</div>
+						</form>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		
+		<div class="content__footer">
+			<div class="item__footer">
+				<div class="item2__footer">
+					<h4>Maker</h4>
+					<span>Trịnh Đỗ Khải</span><br /> <span>Võ Quốc Việt</span><br />
+					<span>Nguyễn Trí Hùng</span><br /> <span>Nguyễn Minh Hiếu</span><br /><span>Mai Hồng Lĩnh</span><br />
+				</div>
+				<div class="item2__footer">
+					<h4>About Us</h4>
+					<span>Introduction</span><br /> <span>Careers</span><br /> <span>Blog</span><br />
+					<span>Contact</span>
+				</div>
+				<div class="item2__footer">
+					<h4>Support</h4>
+					<span>Payment Instructions</span><br /> <span>Terms &
+						Conditions</span><br /> <span>Privacy Policy</span><br /> <span>FAQs</span>
+				</div>
+				<div class="item2__footer">
+					<h4>PHOTOGALLERY</h4>
+					<img src="/img/carou1.jpg" class="" alt="..."> <img
+						src="/img/carou2.jpg" class="" alt="..."> <img
+						src="/img/carou3.jpg" class="" alt="...">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+	crossorigin="anonymous"></script>
+</html>

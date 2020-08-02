@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- <meta charset="ISO-8859-1" /> -->
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/index.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css" />
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script
+	src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+	rel="stylesheet" />
+<link
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	crossorigin="anonymous" />
+</head>
+<body>
+	<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+		<div class="card card0 border-0">
+			<div class="row d-flex">
+				<div class="col-lg-6">
+					<div class="card1 pb-5">
+						<div class="row">
+							<img src="https://i.imgur.com/CXQmsmF.png" class="logo">
+						</div>
+						<div class="row px-3 justify-content-center mt-4 mb-5 border-line">
+							<img src="https://i.imgur.com/uNGdWHi.png" class="image">
+						</div>
+					</div>
+				</div>
+
+				<!-- <div class="row">
+					<div class="col-md-5 mx-auto">
+						<div id="first">
+							<div class="alert alert-danger" role="alert" th:if="${param.error}">The email or password is incorrect!</div>
+							<div class="myform form">
+								<form th:action="@{/login}" method="post">
+									<div class="logo mb-3">
+										<div class="col-md-12 text-center">
+											<h1>Login</h1>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail1">Email address</label> <input type="email" id="email" name="email"
+											class="form-control" placeholder="Enter email" required autofocus />
+									</div>
+									<div class="form-group">
+										<label for="inputPassword">Password</label> <input type="password" id="password" name="password"
+											class="form-control" placeholder="Enter Password" required />
+									</div>
+									<div class="col-md-12 text-center ">
+										<button class="btn btn-block mybtn btn-primary tx-tfm" type="submit">Sign in</button>
+									</div>
+									<div class="mt-2 text-center form-group">
+										Don't have account? <a th:href="@{/signup}">Sign up here</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="col-lg-6">
+					<form th:action="@{/login}" method="post">
+						<div class="card2 card border-0 px-4 py-5">
+							<div class="row px-3">
+								<label class="mb-1">
+									<h6 class="mb-0 text-sm">Email Address</h6>
+								</label> <input class="mb-4" type="text" name="email" id="email"
+									placeholder="Enter a valid email address">
+							</div>
+							<div class="row px-3">
+								<label class="mb-1">
+									<h6 class="mb-0 text-sm">Password</h6>
+								</label> <input type="password" name="password" id="email"
+									placeholder="Enter password">
+							</div>
+							<div class="row px-3 mb-4">
+								<div
+									class="custom-control custom-checkbox custom-control-inline">
+									<input id="chk1" type="checkbox" name="remember-me"
+										class="custom-control-input" > <label for="chk1"
+										class="custom-control-label text-sm">Remember me</label>
+								</div>
+							</div>
+							<div class="row mb-3 px-3">
+								<button type="submit" class="btn btn-blue text-center">Login</button>
+							</div>
+							<div class="row mb-4 px-3">
+								<small class="font-weight-bold">Don't have an account? <a
+									class="text-danger" th:href="@{/signup}">Register</a></small>
+							</div>
+						
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="bg-blue py-4">
+				<div class="row px-3">
+					<small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2019. All
+						rights reserved.</small>
+					<div class="social-contact ml-4 ml-sm-auto">
+						<span class="fa fa-facebook mr-4 text-sm"></span> <span
+							class="fa fa-google-plus mr-4 text-sm"></span> <span
+							class="fa fa-linkedin mr-4 text-sm"></span> <span
+							class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../static/js/index.js"></script>
+</body>
+</html>
